@@ -3,9 +3,23 @@ import styles from './Header.module.css'
 import { useState } from 'react';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
+import { NavLink } from 'react-router';
+
+interface navMenuInterface {
+    name : string
+    path : string
+}
 
 const Header = () => {
-    const navMenu : Array<string> = ["Home", "About Us", "Academics", "Admissions", "Student Life", "Contact"]
+    const navMenu : navMenuInterface [] = [
+        { name: "Home", path: "/" },
+        { name: "About Us", path: "about" },
+        { name: "Academics", path: "academics" },
+        { name: "Admissions", path: "admissions" },
+        { name: "Student Life", path: "students_life" },
+        { name: "Contact", path: "contact" }
+    ];
+    // const navMenu : Array<string> = ["Home", "About Us", "Academics", "Admissions", "Student Life", "Contact"]
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -15,7 +29,7 @@ const Header = () => {
                 <FaArrowRight />
             </div>
             <header>
-                <img src="/Logo.png" alt="" className={styles.logo}/>
+                <img src="/assets/imgs/Logo.png" alt="" className={styles.logo}/>
                 <button 
                     className={styles.menuMob} 
                     onClick={() => setIsOpen(!isOpen)}
@@ -26,7 +40,16 @@ const Header = () => {
                     <ul>
                     {navMenu.map ((item , index ) => {
                         return(
-                            <li key={index}>{item}</li>
+                            <li key={index}>
+                                <NavLink 
+                                    to={item.path}
+                                    className={({ isActive }) => 
+                                        isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+                                    }
+                                >
+                                {item.name}
+                                </NavLink>
+                                </li>
                         )}
                     )}
                     </ul>
@@ -36,7 +59,16 @@ const Header = () => {
                 <nav className={styles.mobileNav}>
                     <ul>
                         {navMenu.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index}>
+                                <NavLink 
+                                    to={item.path}
+                                    className={({ isActive }) => 
+                                        isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+                                    }
+                                >
+                                {item.name}
+                                </NavLink>
+                            </li>
                         ))}
                     </ul>
                 </nav>

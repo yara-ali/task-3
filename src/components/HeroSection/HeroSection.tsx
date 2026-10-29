@@ -1,4 +1,4 @@
-import Header from '../Header/Header'
+
 import styles from './HeroSection.module.css'
 const HeroSection = () => {
     interface NumberItem {
@@ -12,10 +12,9 @@ const HeroSection = () => {
     ]
     return (
         <div className={styles.Hero}>
-            <Header/>
             <div className={styles.HeroContent}>
             <div className={styles.leftSection}>
-                <img src="/HeroImg.png" alt="" />
+                <img src="/public/assets/imgs/HeroImg.png" alt="" />
             </div>
             <div className={styles.rightSection}>
                 <h5>Welcome to Little Learners Academy</h5>

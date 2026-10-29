@@ -1,0 +1,82 @@
+
+.carouselContainer {
+  width: 100%;
+  overflow: visible;
+  margin-bottom: 30px;
+  padding-top: 30px; 
+
+  .cardsGrid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(33.333% - 14px); 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+    gap: 20px;
+    width: 100%;
+    padding-top: 45px;    
+    padding-bottom: 25px;
+    .card {
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 40px 30px 25px 30px;
+      position: relative;
+      overflow: visible; 
+      .iconBox {  
+        font-size: 20px;
+        position: absolute;
+        top: -22px;
+        left: 25px;
+        width: 45px;
+        height: 45px;
+        background-color: #FFDECC;
+        border: 2px solid #262626;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cardTitle {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #1A1A1A;
+        margin-top: 10px;
+      }
+
+      .cardDescription {
+        font-size: 14px;
+        color: #4C4C4D;
+    }
+      }
+
+}
+}
+.navigationRow {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  .arrowButtons {
+    display: flex;
+    gap: 8px;
+    .navBtn {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #333333;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+    }
+}
+}
+
+@media (max-width: 992px) {
+  .carouselContainer .cardsGrid {
+    grid-auto-columns: 100%; 
+  }
+}

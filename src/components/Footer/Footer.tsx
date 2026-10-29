@@ -11,7 +11,7 @@ const Footer = () => {
         <div className={styles.footerContainer}>
             <div className={styles.firstSection}>
                 <div className={styles.info}>
-                    <img src="./Logo.png" alt="Logo" />
+                    <img src="/assets/imgs/Logo.png" alt="Logo" />
                     <p>We believe in the power of play to foster creativity, problem-solving skills, and imagination.</p>
                     <div className={styles.contactWays}>
                     <div className={styles.contactInfo}>

@@ -1,8 +1,9 @@
-import styles from "./BenefitCard.module.css"
+
 import { benefitsCardsData } from "./BenefitsCardsData"
 import { FaGraduationCap , FaCrown , FaLifeRing , FaMaskFace } from "react-icons/fa6";
 import { IoFlagSharp , IoPeopleSharp } from "react-icons/io5";
 import { cardsIcons } from "./icons";
+import '../../components/sharedCardStyle.css'
 
 function BenefitCard() {
     
@@ -15,17 +16,17 @@ function BenefitCard() {
         [cardsIcons.people] : IoPeopleSharp
 };
     return (
-        <div className={styles.Benefits}>
+        <div className="section-container">
             {benefitsCardsData.map((benefit,index) => {
                 const TheIcon = iconCards[benefit.icon]
                 return (
-                <div key={index} className={styles.benefitCard}>
+                <div key={index} className="shared-card">
                     
-                    <div className={styles.cardIcon}>
-                        <span className={styles.icon}><TheIcon/></span>
+                    <div className="cardIcon">
+                        <span className="icon"><TheIcon/></span>
                     </div>
-                <h3 className={styles.title}>{benefit.title}</h3>
-                <p className={styles.cardDescription}>{benefit.description}</p>
+                <h3 className="title">{benefit.title}</h3>
+                <p className="cardDescription">{benefit.description}</p>
                 </div>)
             })}
         </div>

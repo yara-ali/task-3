@@ -1,0 +1,47 @@
+.membersSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 10vw;
+    .memberCard{
+        padding: 30px;
+        .memberBio{
+            padding: 30px;
+            background-color: #FFF5F0;
+            border: 2px solid #262626;
+            border-radius: 12px;
+            .memberQualifications{
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .member{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        font-weight: 800;
+        font-size: 20px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .letterIcon{
+        padding: 13px 14px 8px 14px;
+        font-size: 18px;
+        border: 2px solid #262626;
+        border-radius: 8px;
+        background-color: #FFDECC;
+    }
+}}

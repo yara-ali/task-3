@@ -1,0 +1,47 @@
+
+.pagesHero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15vh;
+    background-image: url('/assets/imgs/Abstract\ Design.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 200px 200px;
+    padding: 150px 120px;
+    .pageHeadings{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        .pageIntro{
+            background-color: white;
+            color: #262626;
+            border: 2px solid #262626;
+            border-radius: 8px;
+            padding: 10px;
+        }
+}
+    .pageDescription{
+        width: 65%;
+    }
+}
+@media (max-width : 992px){
+    .pagesHero{
+        flex-direction: column;
+        padding: 40px 12px;
+        margin-top: 5vh;
+        background-size: 100px;
+        text-align: center;
+        .pageHeadings{
+            align-items: center;
+        }
+    }
+    .pagesHero .pageDescription{
+        width: 85%;
+        margin-bottom: 5vw;
+    }
+}

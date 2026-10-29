@@ -11,7 +11,7 @@ const ExplorePages = () => {
                 {Pages.map ((page , index) => 
                     <div key={index} className={styles.pageCard}>
                         <h2 className={styles.name}>{page.name}</h2>
-                        <img src="/lines.png" alt="lines" className={styles.img}/>
+                        <img src="/assets/imgs/lines.png" alt="lines" className={styles.img}/>
                         <p>{page.description}</p>
                         <button className={styles.btn}>Learn More <FaArrowRight /></button>
                     </div>

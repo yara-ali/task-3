@@ -1,0 +1,121 @@
+.historySection {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .mainContainer {
+        max-width: 1000px;
+        background: white;
+        padding: 50px 40px;
+        .timelineWrapper {
+        position: relative;
+        padding-left: 50px; 
+            .mainVerticalLine {
+            position: absolute;
+            left: 10px;
+            top: 66px;
+            bottom: 62px;
+            width: 7px;
+            background-color: #FFBE98; 
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            hr{
+            height: 100%;
+            width: 3px;
+            }
+}
+            .timelineItem {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+                .connector {
+                position: absolute;
+                left: -43px; 
+                display: flex;
+                align-items: center;
+                z-index: 2;
+                .circleDot {
+                width: 14px;
+                height: 14px;
+                background-color: #fff;
+                border: 2px solid #000;
+                border-radius: 50%;
+            }
+
+            .horizontalLine {
+                display: flex;
+                align-items: center;
+                width: 30px;
+                height: 7px;
+                background-color: #FFBE98;
+                hr{
+                    width: 100%;
+                    height: 3px;
+
+                }
+}
+}
+.historyCard {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 12px;
+    padding: 20px 25px;
+    width: 100%;
+.yearBox {
+
+    border: 2px solid #000;
+    border-radius: 8px;
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    .yearText {
+        font-size: 32px;
+        font-weight: 700;
+}
+}
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    .cardTitle {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+}
+    .cardDesc {
+        font-size: 14px;
+}
+}
+}
+}
+}
+}
+
+}
+
+@media (max-width : 992px){
+    .historySection .mainContainer{
+        padding: 30px 20px;
+    
+    .timelineWrapper {
+        .mainVerticalLine{
+            bottom: 212px;
+        }
+    
+    .timelineItem .historyCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }}}
+    .connector{
+        top: 54px;
+    }
+}
